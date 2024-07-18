@@ -9,11 +9,11 @@ public class Serialization {
 
         try {
             FileOutputStream fileOut = new FileOutputStream("C:\\Users\\Roshen Perera\\Documents\\byteStream.txt");//Specifies the path of the file where data is printed.
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(student);
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);// Converts the object into byte stream.
+            objectOut.writeObject(student);// Writes the object as a byte stream
             objectOut.close();
             fileOut.close();
-            System.out.println("Object written successfully");
+            System.out.println("Data Serialized Successfully");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
